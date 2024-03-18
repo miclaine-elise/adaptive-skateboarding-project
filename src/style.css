@@ -49,3 +49,50 @@ a {
     color: black;
     text-decoration: none;
 }
+
+#about-top-img-container {
+    width: 100vw;
+    position: relative;
+}
+
+#about-main-img {
+    width: 100vw;
+    z-index: 1;
+}
+
+#about-title {
+    position: absolute;
+    top: 2rem;
+    color: white;
+    font-size: 4rem;
+    z-index: 2;
+    text-align: center;
+    width: 100vw;
+}
+
+#about-quote-container {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding: 2rem;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+#about-quote {
+    border: solid 1px black;
+    width: 30rem;
+    font-size: 1.5rem;
+    padding: 2rem;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+}
+
+#about-experience-btn {
+    background-color: rgb(67, 67, 67);
+    color: white;
+    width: 10rem;
+    margin-top: -2rem;
+    justify-self: end;
+}
