@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
     margin: 0;
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
     background-color: #BDBDA1;
-    font-family: sans-serif;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 header {
     display: grid;
-    grid-template-columns: 50vw 50vw;
+    grid-template-columns: 1fr 1fr;
     padding: 1rem;
     border-bottom: solid 1px black;
 }
@@ -23,6 +25,7 @@ header {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     gap: 1rem;
+    font-size: 1.5rem;
 }
 
 footer {
@@ -32,6 +35,7 @@ footer {
     justify-items: center;
     justify-content: center;
     gap: 1rem;
+    padding: 0.5rem;
 }
 
 footer img {
@@ -53,6 +57,7 @@ a {
 #about-top-img-container {
     width: 100vw;
     position: relative;
+    border-bottom: solid 1px black;
 }
 
 #about-main-img {
@@ -64,7 +69,7 @@ a {
     position: absolute;
     top: 2rem;
     color: white;
-    font-size: 4rem;
+    font-size: 6rem;
     z-index: 2;
     text-align: center;
     width: 100vw;
@@ -76,7 +81,6 @@ a {
     justify-content: center;
     align-content: center;
     padding: 2rem;
-    border-top: solid 1px black;
     border-bottom: solid 1px black;
 }
 
@@ -95,4 +99,31 @@ a {
     width: 10rem;
     margin-top: -2rem;
     justify-self: end;
+    font-family: "Bebas Neue";
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    border: solid 1px black;
+}
+
+#about-define-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    background-color: #FFFFF4;
+    padding: 3rem;
+    gap: 2rem;
+    border-bottom: solid 1px black;
+    padding-bottom: 4rem;
+}
+
+#about-define-title {
+    justify-self: end;
+    font-size: 3rem;
+}
+
+#about-definition {
+    align-self: center;
+    justify-self: center;
+    width: 50rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
 }

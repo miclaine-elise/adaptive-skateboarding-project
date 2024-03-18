@@ -25,7 +25,19 @@ export function loadAboutPage() {
     quoteContainer.appendChild(quote);
     quoteContainer.appendChild(realStoriesBtn);
 
+
+    const defineContainer = document.createElement('div');
+    defineContainer.id = 'about-define-container';
+    const defineTitle = document.createElement('span');
+    defineTitle.id = 'about-define-title';
+    defineTitle.textContent = "WHAT IS THE ADAPTIVE SKATEBOARD PROJECT?"
+    const definition = document.createElement('p');
+    definition.id = 'about-definition';
+    definition.textContent = "The Adaptive Skateboard Project aims to highlight adaptive skateboarders and serve as a resource for people who are involved or would like to be involved in adaptive skateboarding. We want to connect. We want to build community. We want to share experiences. We want to share resources. We want to share information on techniques and strategies. We want to all have a place to skate. We want to compete. We want to expand and grow. Most of all we all want to skateboard! This will take advocacy and teamwork, please connect, and send any information you have."
+    defineContainer.appendChild(defineTitle);
+    defineContainer.appendChild(definition);
+
     content.appendChild(topImgContainer);
     content.appendChild(quoteContainer);
-
+    content.appendChild(defineContainer);
 }
