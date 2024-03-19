@@ -5,6 +5,17 @@ export function loadResourcesPage() {
     resourcesBtn.style.textDecoration = 'underline';
 
     const content = document.querySelector('#content');
+
+    const resourcesHeader = document.createElement('div');
+    resourcesHeader.id = 'resources-header';
+    const resourcesHeaderLargeText = document.createElement('h1');
+    const resourcesHeaderSmallText = document.createElement('span');
+    resourcesHeaderLargeText.textContent = 'GETTING STARTED IN ADAPTIVE SKATEBOARDING';
+    resourcesHeaderSmallText.textContent = 'Good people doing good things to build community and keep the stoke high'; //change this
+    content.appendChild(resourcesHeader);
+    resourcesHeader.appendChild(resourcesHeaderLargeText);
+    resourcesHeader.appendChild(resourcesHeaderSmallText);
+
     const programsContainer = document.createElement('div');
     programsContainer.id = 'resources-programs-container';
     const programsTitle = document.createElement('span');
@@ -36,4 +47,39 @@ export function loadResourcesPage() {
     highlightedProgram.appendChild(highlightedProgramImg);
     highlightedProgram.appendChild(highlightedProgramTitle);
     highlightedProgram.appendChild(highlightedProgramBlurb);
+
+
+    const grantsContainer = document.createElement('div');
+    grantsContainer.id = 'resources-grants-container';
+    const grantsTitle = document.createElement('span');
+    grantsTitle.textContent = 'grants';
+    grantsTitle.id = 'resources-grants-title';
+    const grantsList = document.createElement('ul');
+    grantsList.id = 'resources-grants-list';
+    content.appendChild(grantsContainer);
+    grantsContainer.appendChild(grantsTitle);
+    grantsContainer.appendChild(grantsList);
+    const grants = [['Challenged Athletes Equipment', 'https://www.challengedathletes.org/grants/'], ['Wheels for Wheels', 'https://www.poseidenfoundation.org/']]; //Need links from Megan
+    grants.forEach(function (element) {
+        let listElement = document.createElement('li');
+        let linkElement = document.createElement('a');
+        linkElement.textContent = element[0];
+        linkElement.href = element[1];
+        listElement.appendChild(linkElement);
+        grantsList.appendChild(listElement);
+    });
+    const highlightedGrant = document.createElement('div');
+    highlightedGrant.id = 'resources-highlighted-grant';
+    const highlightedGrantVideo = document.createElement('iframe');
+    highlightedGrantVideo.src = 'https://www.youtube.com/embed/qDZHr39JteA?si=OoFs-8Y1FuLjNkcW';
+    const highlightedGrantTitle = document.createElement('h1');
+    highlightedGrantTitle.textContent = 'Challenged Athletes Foundation Grant';
+    const highlightedGrantBlurb = document.createElement('p');
+    highlightedGrantBlurb.textContent = "This is who we are, it's what we're all about, join the movement to Be the Change! We have taken our 10th Annual Skate for a Cause ON THE ROAD with a 10 stop tour giving away $10,000 Be the Change grants at each stop! The first half of our tour is done, check out stops 1-5 in the recap video."
+    grantsContainer.appendChild(highlightedGrant);
+    highlightedGrant.appendChild(highlightedGrantVideo);
+    highlightedGrant.appendChild(highlightedGrantTitle);
+    highlightedGrant.appendChild(highlightedGrantBlurb);
 }
+{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/qDZHr39JteA?si=OoFs-8Y1FuLjNkcW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */ }
+
