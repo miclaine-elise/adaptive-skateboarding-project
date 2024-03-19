@@ -127,3 +127,42 @@ a {
     line-height: 2rem;
     font-size: 1.5rem;
 }
+
+#resources-programs-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 40vw auto;
+    column-gap: 3rem;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #ecece0;
+}
+
+#resources-programs-title {
+    font-size: 3rem;
+    justify-self: center;
+    grid-area: 1/1/2/3;
+}
+
+#resources-programs-list {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    justify-self: end;
+    grid-area: 2/2/3/3;
+}
+
+#resources-highlighted-program {
+    grid-area: 2/1/3/2;
+    display: grid;
+}
+
+#resources-highlighted-program img {
+    width: 40vw;
+    justify-self: center;
+}
+
+#resources-highlighted-program h1 {
+    font-size: 1.5rem;
+}
