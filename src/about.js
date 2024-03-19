@@ -1,6 +1,9 @@
 import aboutPageImg from './about-page-img.jpg';
 
 export function loadAboutPage() {
+    const aboutBtn = document.querySelector('#about');
+    aboutBtn.style.textDecoration = 'underline';
+
     const content = document.querySelector('#content');
 
     const topImgContainer = document.createElement('div');

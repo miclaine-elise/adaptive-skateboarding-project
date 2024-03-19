@@ -2,6 +2,7 @@ import logo from './adaptive-logo.svg';
 import emailIcon from './email-icon.svg';
 import instagramIcon from './instagram-icon.svg';
 import { loadAboutPage } from './about.js';
+import { loadResourcesPage } from './resources.js';
 import './normalize.css';
 import './style.css';
 
@@ -27,6 +28,7 @@ aboutBtn.addEventListener('click', function () {
         content.removeChild(content.lastChild);
     }
     currentPage = "about";
+    removeUnderline();
     loadAboutPage();
 })
 
@@ -34,7 +36,9 @@ experienceBtn.addEventListener('click', function () {
     while (content.firstChild) {
         content.removeChild(content.lastChild);
     }
-
+    removeUnderline();
+    const experienceBtn = document.querySelector('#experience');
+    experienceBtn.style.textDecoration = 'underline';
     currentPage = "experience";
     loadExperiencePage();
 })
@@ -43,6 +47,9 @@ eventsBtn.addEventListener('click', function () {
     while (content.firstChild) {
         content.removeChild(content.lastChild);
     }
+    removeUnderline();
+    const eventsBtn = document.querySelector('#events');
+    eventsBtn.style.textDecoration = 'underline';
     currentPage = "events";
     loadEventsPage();
 })
@@ -50,6 +57,9 @@ skateparksBtn.addEventListener('click', function () {
     while (content.firstChild) {
         content.removeChild(content.lastChild);
     }
+    removeUnderline();
+    const skateparksBtn = document.querySelector('#skateparks');
+    skateparksBtn.style.textDecoration = 'underline';
     currentPage = "skateparks";
     loadSkateparksPage();
 })
@@ -57,6 +67,8 @@ resourcesBtn.addEventListener('click', function () {
     while (content.firstChild) {
         content.removeChild(content.lastChild);
     }
+    removeUnderline();
+
     currentPage = "resources";
     loadResourcesPage();
 })
@@ -82,4 +94,17 @@ export function reloadCurrentPage() {
             loadResourcesPage();
             break;
     }
+}
+
+function removeUnderline() {
+    const aboutBtn = document.querySelector('#about');
+    aboutBtn.style.textDecoration = 'none';
+    const experienceBtn = document.querySelector('#experience');
+    experienceBtn.style.textDecoration = 'none';
+    const eventsBtn = document.querySelector('#events');
+    eventsBtn.style.textDecoration = 'none';
+    const skateparksBtn = document.querySelector('#skateparks');
+    skateparksBtn.style.textDecoration = 'none';
+    const resourcesBtn = document.querySelector('#resources');
+    resourcesBtn.style.textDecoration = 'none';
 }
