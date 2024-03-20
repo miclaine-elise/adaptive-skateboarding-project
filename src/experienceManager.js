@@ -1,3 +1,5 @@
+import displayStories from './experience.js';
+import { storyDomElement } from './experience.js';
 const storyList = [];
 
 export class Story {
@@ -9,8 +11,8 @@ export class Story {
         this.photo = photo;
         this.info = info;
         console.table(this);
-
     }
+
     addStoryToList() {
         storyList.push(this);
         console.table(storyList);
@@ -19,7 +21,7 @@ export class Story {
 
 export function getStories() {
     for (let i = 0; i < storyList.length; i++) {
-        new storyDomElement(storyList[i].name, storyList[i].city, storyList[i].country, storyList[i].age, storyList[i].photo, storyList[i].info);
+        new storyDomElement(storyList[i].name, storyList[i].city, storyList[i].country, storyList[i].age, storyList[i].photo, storyList[i].info).displayStories();
     }
 }
 

@@ -198,3 +198,51 @@ a {
 #resources-highlighted-grant h1 {
     font-size: 1.5rem;
 }
+
+#story-list {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    margin: 2rem;
+    gap: 2rem;
+}
+
+.story-container {
+    display: grid;
+    grid-template-columns: 20rem auto;
+    border: solid 1px black;
+    width: 80vw;
+    background-color: #e1e1d3;
+    padding: 2rem;
+    box-shadow: 1px 1px 10px black;
+}
+
+.story-container img {
+    width: 18rem;
+    /* border: solid 3px black; */
+    box-shadow: 1px 1px 10px black;
+    border-radius: 1rem;
+}
+
+.story-text-container {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    border: solid 3px #BDBDA1;
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+
+.story-name {
+    font-size: 3rem;
+}
+
+.story-age,
+.story-location {
+    font-size: 1.25rem;
+}
+
+.story-info {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
