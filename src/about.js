@@ -1,5 +1,7 @@
 import aboutPageImg from './about-page-img.jpg';
-
+import rightIcon from './menu-right.svg';
+import leftIcon from './menu-left.svg';
+import imageSlider from './ImageSlider/imageSlider.json';
 export function loadAboutPage() {
     const aboutBtn = document.querySelector('#about');
     aboutBtn.style.textDecoration = 'underline';
@@ -17,6 +19,8 @@ export function loadAboutPage() {
     topImgContainer.appendChild(aboutPageTitle);
     topImgContainer.appendChild(mainImg);
 
+    const quoteVideoContainer = document.createElement('div');
+    quoteVideoContainer.id = 'about-quote-video';
     const quoteContainer = document.createElement('div');
     quoteContainer.id = 'about-quote-container';
     const quote = document.createElement('p');
@@ -25,8 +29,27 @@ export function loadAboutPage() {
     const realStoriesBtn = document.createElement('button');
     realStoriesBtn.id = 'about-experience-btn';
     realStoriesBtn.textContent = 'READ REAL STORIES';
+
+    const imageSliderContainer = document.createElement('div');
+    imageSliderContainer.id = 'about-image-slider-container';
+    const nextVideoButton = document.createElement('img');
+    nextVideoButton.src = rightIcon;
+    nextVideoButton.id = 'about-next-video';
+    const previousVideoButton = document.createElement('img');
+    previousVideoButton.id = 'about-previous-video';
+    previousVideoButton.src = leftIcon;
+    imageSliderContainer.appendChild(nextVideoButton);
+    imageSliderContainer.appendChild(previousVideoButton);
+
+    quoteVideoContainer.appendChild(quoteContainer);
+    quoteVideoContainer.appendChild(imageSliderContainer);
     quoteContainer.appendChild(quote);
     quoteContainer.appendChild(realStoriesBtn);
+
+
+    const video = document.createElement('video');
+    video.id = 'about-video';
+    imageSliderContainer.appendChild(video);
 
 
     const defineContainer = document.createElement('div');
@@ -41,6 +64,48 @@ export function loadAboutPage() {
     defineContainer.appendChild(definition);
 
     content.appendChild(topImgContainer);
-    content.appendChild(quoteContainer);
+    content.appendChild(quoteVideoContainer);
     content.appendChild(defineContainer);
+    imageSliderHandler();
+}
+function imageSliderHandler() {
+    const video = document.querySelector('#about-video');
+    video.controls = true;
+    video.autoplay = true;
+    video.muted = true;
+    video.width = 400;
+    // video.height = 800;
+    const videoSrc = document.createElement('source');
+    video.appendChild(videoSrc);
+    videoSrc.src = '../src/ImageSlider/slider_1.mp4';
+    videoSrc.type = 'video/mp4';
+    let currentVideo = 1;
+    function playNextVideo() {
+        currentVideo = currentVideo + 1;
+        if (currentVideo > imageSlider.videos.length) {
+            currentVideo = 1;
+        }
+        videoSrc.src = '../src/ImageSlider/slider_' + currentVideo + '.mp4';
+        video.load();
+    }
+    video.addEventListener('ended', playNextVideo);
+    const nextVideoButton = document.querySelector('#about-next-video');
+    nextVideoButton.addEventListener('click', playNextVideo);
+    const previousVideoButton = document.querySelector('#about-previous-video');
+    previousVideoButton.addEventListener('click', function playPreviousVideo() {
+        currentVideo = currentVideo - 1;
+        if (currentVideo < 1) {
+            currentVideo = imageSlider.videos.length;
+        }
+        videoSrc.src = '../src/ImageSlider/slider_' + currentVideo + '.mp4';
+        video.load();
+    })
+    for (let i = 0; i < imageSlider.videos.length; i++) {
+        let pagination = document.createElement('div');
+        let num = i + 1
+        pagination.id = 'page-' + num;
+        const imageSliderContainer = document.querySelector('#about-image-slider-container');
+        imageSliderContainer.appendChild(pagination);
+    }
+
 }

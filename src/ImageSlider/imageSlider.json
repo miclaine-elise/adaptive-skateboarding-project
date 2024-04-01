@@ -1,0 +1,10 @@
+{
+    "videos": [
+        {
+            "src": "/..src/ImageSlider/slider_1.mp4"
+        },
+        {
+            "src": "/..src/ImageSlider/slider_2.mp4"
+        }
+    ]
+}

@@ -1,6 +1,7 @@
 import { getStories } from './experienceManager.js';
 import { Story, addStoryToList } from './experienceManager.js';
 import storyImg1 from './storyImages/story_1.png';
+import storyImg2 from './storyImages/story_2.png';
 export function loadExperiencePage() {
     const experienceBtn = document.querySelector('#experience');
     experienceBtn.style.textDecoration = 'underline';
@@ -19,8 +20,10 @@ export function loadExperiencePage() {
 
 
     //this is just to test that this is going to work
-    let newStory = new Story('Megan', 'Seattle', 'USA', '26', storyImg1, 'Hi! Im an adaptive skater... ive been adaptive skating since i was 8. My favorite thing about adaptive skating is being a part of a community.');
-    newStory.addStoryToList(newStory);
+    let newStory1 = new Story('Megan', 'Seattle', 'USA', '26', storyImg1, 'Hi! Im an adaptive skater... ive been adaptive skating since i was 8. My favorite thing about adaptive skating is being a part of a community.');
+    newStory1.addStoryToList(newStory1);
+    let newStory2 = new Story('Miclaine', 'Seattle', 'USA', '26', storyImg2, 'Hi! Im another adaptive skater... ive been adaptive skating since i was 7. My favorite thing about adaptive skating is being better than Megan.');
+    newStory2.addStoryToList(newStory2);
     getStories();
 }
 
