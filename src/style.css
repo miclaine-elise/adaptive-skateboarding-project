@@ -397,3 +397,17 @@ a {
 #download-container img {
     height: 1.5rem;
 }
+
+#about-pagination-container {
+    grid-area: 3/2/4/3;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    background-color: #FFFFF4;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem;
+}

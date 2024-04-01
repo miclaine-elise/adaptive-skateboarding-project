@@ -70,16 +70,36 @@ export function loadAboutPage() {
 }
 function imageSliderHandler() {
     const video = document.querySelector('#about-video');
-    video.controls = true;
-    video.autoplay = true;
-    video.muted = true;
-    video.width = 400;
-    // video.height = 800;
+    const paginationContainer = document.createElement('div');
+    paginationContainer.id = 'about-pagination-container';
+    const previousVideoButton = document.querySelector('#about-previous-video');
+    const imageSliderContainer = document.querySelector('#about-image-slider-container');
+    const nextVideoButton = document.querySelector('#about-next-video');
+
+    imageSliderContainer.appendChild(paginationContainer);
     const videoSrc = document.createElement('source');
     video.appendChild(videoSrc);
-    videoSrc.src = '../src/ImageSlider/slider_1.mp4';
-    videoSrc.type = 'video/mp4';
     let currentVideo = 1;
+
+
+    for (let i = 0; i < imageSlider.videos.length; i++) {
+        let pagination = document.createElement('div');
+        let num = i + 1
+        pagination.id = 'page-' + num;
+        pagination.classList.add('pagination');
+        paginationContainer.appendChild(pagination);
+    }
+    initVideo();
+    function initVideo() {
+        video.controls = true;
+        video.autoplay = true;
+        video.muted = true;
+        video.width = 400;
+        videoSrc.src = '../src/ImageSlider/slider_1.mp4';
+        videoSrc.type = 'video/mp4';
+        handlePagination();
+    }
+
     function playNextVideo() {
         currentVideo = currentVideo + 1;
         if (currentVideo > imageSlider.videos.length) {
@@ -87,11 +107,10 @@ function imageSliderHandler() {
         }
         videoSrc.src = '../src/ImageSlider/slider_' + currentVideo + '.mp4';
         video.load();
+        handlePagination();
     }
     video.addEventListener('ended', playNextVideo);
-    const nextVideoButton = document.querySelector('#about-next-video');
     nextVideoButton.addEventListener('click', playNextVideo);
-    const previousVideoButton = document.querySelector('#about-previous-video');
     previousVideoButton.addEventListener('click', function playPreviousVideo() {
         currentVideo = currentVideo - 1;
         if (currentVideo < 1) {
@@ -99,13 +118,14 @@ function imageSliderHandler() {
         }
         videoSrc.src = '../src/ImageSlider/slider_' + currentVideo + '.mp4';
         video.load();
+        handlePagination();
     })
-    for (let i = 0; i < imageSlider.videos.length; i++) {
-        let pagination = document.createElement('div');
-        let num = i + 1
-        pagination.id = 'page-' + num;
-        const imageSliderContainer = document.querySelector('#about-image-slider-container');
-        imageSliderContainer.appendChild(pagination);
+    function handlePagination() {
+        const allPages = document.querySelectorAll('.pagination');
+        for (let page of allPages) {
+            page.style.backgroundColor = 'white';
+        }
+        let currentPagination = document.querySelector('#page-' + currentVideo);
+        currentPagination.style.backgroundColor = 'black';
     }
-
 }
