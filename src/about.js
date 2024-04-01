@@ -2,6 +2,7 @@ import aboutPageImg from './about-page-img.jpg';
 import rightIcon from './menu-right.svg';
 import leftIcon from './menu-left.svg';
 import imageSlider from './ImageSlider/imageSlider.json';
+import aboutGallery from './AboutGallery/aboutGallery.json';
 export function loadAboutPage() {
     const aboutBtn = document.querySelector('#about');
     aboutBtn.style.textDecoration = 'underline';
@@ -59,13 +60,27 @@ export function loadAboutPage() {
     defineTitle.textContent = "WHAT IS THE ADAPTIVE SKATEBOARD PROJECT?"
     const definition = document.createElement('p');
     definition.id = 'about-definition';
-    definition.textContent = "The Adaptive Skateboard Project aims to highlight adaptive skateboarders and serve as a resource for people who are involved or would like to be involved in adaptive skateboarding. We want to connect. We want to build community. We want to share experiences. We want to share resources. We want to share information on techniques and strategies. We want to all have a place to skate. We want to compete. We want to expand and grow. Most of all we all want to skateboard! This will take advocacy and teamwork, please connect, and send any information you have."
+    definition.textContent = "The Adaptive Skateboard Project aims to highlight adaptive skateboarders and serve as a resource for people who are involved or would like to get involved in adaptive skateboarding. We want to connect. We want to build community. We want to share experiences. We want to share resources. We want to share information on techniques and strategies. We want to have a place to skate. We want to compete. We want to expand and grow. Most of all we all want to skateboard."
     defineContainer.appendChild(defineTitle);
     defineContainer.appendChild(definition);
+
+    const galleryTitle = document.createElement('h1');
+    galleryTitle.id = 'about-gallery-title';
+    galleryTitle.textContent = 'the adaptive skate community is growing';
+    const galleryContainer = document.createElement('div');
+    galleryContainer.id = 'about-gallery-container';
+    for (let image of aboutGallery.photos) {
+        console.log(image.src);
+        let photo = document.createElement('img');
+        photo.src = image.src;
+        galleryContainer.appendChild(photo);
+    }
 
     content.appendChild(topImgContainer);
     content.appendChild(quoteVideoContainer);
     content.appendChild(defineContainer);
+    content.appendChild(galleryTitle);
+    content.appendChild(galleryContainer);
     imageSliderHandler();
 }
 function imageSliderHandler() {

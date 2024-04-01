@@ -1,0 +1,16 @@
+{
+    "photos": [
+        {
+            "src": "../src/AboutGallery/image_1.jpg"
+        },
+        {
+            "src": "../src/AboutGallery/image_2.jpg"
+        },
+        {
+            "src": "../src/AboutGallery/image_3.jpg"
+        },
+        {
+            "src": "../src/AboutGallery/image_4.jpg"
+        }
+    ]
+}

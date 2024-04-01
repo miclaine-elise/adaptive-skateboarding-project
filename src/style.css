@@ -59,12 +59,12 @@ a {
 #about-top-img-container {
     width: 100vw;
     position: relative;
-    border-bottom: solid 1px black;
 }
 
 #about-main-img {
     width: 100vw;
     z-index: 1;
+    border-bottom: solid 1px black;
 }
 
 #about-title {
@@ -127,7 +127,7 @@ a {
     padding: 2rem;
     margin-right: 3rem;
     margin-bottom: 1rem;
-    background-color: black;
+    background-color: #1a1a1a;
     color: white;
     box-shadow: 1px 1px 10px black;
 }
@@ -141,8 +141,10 @@ a {
     justify-self: end;
     font-family: "Bebas Neue";
     font-size: 1.5rem;
-    padding: 0.25rem;
-    border: solid 1px black;
+    padding: 0.4rem;
+    border: none;
+    box-shadow: 1px 1px 10px black;
+
 }
 
 #about-define-container {
@@ -410,4 +412,25 @@ a {
     height: 1rem;
     border-radius: 1rem;
     margin: 0.5rem;
+}
+
+#about-gallery-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #1a1a1a
+}
+
+#about-gallery-container img {
+    width: 20rem;
+}
+
+#about-gallery-title {
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 3rem;
+    padding: 1rem;
 }
