@@ -7,6 +7,28 @@ import { loadExperiencePage } from './experience.js';
 import { loadSkateparksPage } from './skateparks.js';
 import './normalize.css';
 import './style.css';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyCar7IpWbjftPD63HAesSGSsijPxbxDlG4",
+    authDomain: "adaptive-skateboard.firebaseapp.com",
+    projectId: "adaptive-skateboard",
+    storageBucket: "adaptive-skateboard.appspot.com",
+    messagingSenderId: "823287918426",
+    appId: "1:823287918426:web:246e28add081bcbb098d63",
+    measurementId: "G-9PVLKHEWGL"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 
 const header = document.querySelector('#header');
 const headerImg = document.querySelector('#header-logo');
@@ -34,7 +56,9 @@ aboutBtn.addEventListener('click', function () {
     loadAboutPage();
 })
 
-experienceBtn.addEventListener('click', function () {
+experienceBtn.addEventListener('click', selectExperiencePage)
+
+export function selectExperiencePage() {
     while (content.firstChild) {
         content.removeChild(content.lastChild);
     }
@@ -43,7 +67,7 @@ experienceBtn.addEventListener('click', function () {
     experienceBtn.style.textDecoration = 'underline';
     currentPage = "experience";
     loadExperiencePage();
-})
+}
 
 eventsBtn.addEventListener('click', function () {
     while (content.firstChild) {

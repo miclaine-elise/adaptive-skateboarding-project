@@ -3,6 +3,7 @@ import rightIcon from './menu-right.svg';
 import leftIcon from './menu-left.svg';
 import imageSlider from './ImageSlider/imageSlider.json';
 import aboutGallery from './AboutGallery/aboutGallery.json';
+import { selectExperiencePage } from './index.js';
 export function loadAboutPage() {
     const aboutBtn = document.querySelector('#about');
     aboutBtn.style.textDecoration = 'underline';
@@ -30,6 +31,7 @@ export function loadAboutPage() {
     const realStoriesBtn = document.createElement('button');
     realStoriesBtn.id = 'about-experience-btn';
     realStoriesBtn.textContent = 'READ REAL STORIES';
+    realStoriesBtn.addEventListener('click', selectExperiencePage);
 
     const imageSliderContainer = document.createElement('div');
     imageSliderContainer.id = 'about-image-slider-container';
