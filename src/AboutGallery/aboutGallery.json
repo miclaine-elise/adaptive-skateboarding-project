@@ -1,16 +1,28 @@
 {
     "photos": [
         {
-            "src": "../src/AboutGallery/image_1.jpg"
+            "src": "../src/AboutGallery/image_1.jpg",
+            "name": "Jennifer Lynn Adams",
+            "instagram": "@awakenministriesacademy",
+            "instagramLink": "https://www.instagram.com/awakenministriesacademy"
         },
         {
-            "src": "../src/AboutGallery/image_2.jpg"
+            "src": "../src/AboutGallery/image_2.jpg",
+            "name": "Tia Pearl",
+            "instagram": "@thetiapearl",
+            "instagramLink": "https://www.instagram.com/thetiapearl"
         },
         {
-            "src": "../src/AboutGallery/image_3.jpg"
+            "src": "../src/AboutGallery/image_3.jpg",
+            "name": "Ernie Ibarra",
+            "instagram": "@ernieibarra_sk8",
+            "instagramLink": "https://www.instagram.com/ernieibarra_sk8"
         },
         {
-            "src": "../src/AboutGallery/image_4.jpg"
+            "src": "../src/AboutGallery/image_4.jpg",
+            "name": "Sebastian Erazo",
+            "instagram": "@cebea_wcmx",
+            "instagramLink": "https://www.instagram.com/cebea_wmx"
         }
     ]
 }

@@ -70,10 +70,16 @@ export function loadAboutPage() {
     const galleryContainer = document.createElement('div');
     galleryContainer.id = 'about-gallery-container';
     for (let image of aboutGallery.photos) {
-        console.log(image.src);
+        let imageContainer = document.createElement('div');
+        imageContainer.classList.add('about-gallery-image-container');
         let photo = document.createElement('img');
         photo.src = image.src;
-        galleryContainer.appendChild(photo);
+        let instagram = document.createElement('a');
+        instagram.textContent = image.instagram;
+        instagram.href = image.instagramLink;
+        galleryContainer.appendChild(imageContainer);
+        imageContainer.appendChild(photo);
+        imageContainer.appendChild(instagram);
     }
 
     content.appendChild(topImgContainer);

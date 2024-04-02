@@ -1,7 +1,7 @@
 import { getStories } from './experienceManager.js';
 import { Story, addStoryToList } from './experienceManager.js';
-import storyImg1 from './storyImages/story_1.png';
-import storyImg2 from './storyImages/story_2.png';
+import storyImg1 from './Stories/story_1.png';
+import storyImg2 from './Stories/story_2.png';
 export function loadExperiencePage() {
     const experienceBtn = document.querySelector('#experience');
     experienceBtn.style.textDecoration = 'underline';
