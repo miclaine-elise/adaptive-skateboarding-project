@@ -4,7 +4,7 @@ import leftIcon from './menu-left.svg';
 import imageSlider from './ImageSlider/imageSlider.json';
 import aboutGallery from './AboutGallery/aboutGallery.json';
 import { selectExperiencePage } from './index.js';
-// import videoSrcInit from ('../src/ImageSlider/slider_1.mp4');
+// import image_1 from './AboutGallery'
 
 export function loadAboutPage() {
     const aboutBtn = document.querySelector('#about');
@@ -73,17 +73,15 @@ export function loadAboutPage() {
     galleryTitle.textContent = 'the adaptive skate community is growing';
     const galleryContainer = document.createElement('div');
     galleryContainer.id = 'about-gallery-container';
-    for (let image of aboutGallery.photos) {
+    for (let i = 1; i < aboutGallery.photos.length; i++) {
         let imageContainer = document.createElement('div');
         imageContainer.classList.add('about-gallery-image-container');
         let photo = document.createElement('img');
-        console.log(`${image.src}`);
-        let tempSrc = `${image.src}`;
-        let imageSrc = require('./AboutGallery/image_1.jpg');
+        let imageSrc = require(`./AboutGallery/image_${i}.jpg`);
         photo.src = imageSrc;
         let instagram = document.createElement('a');
-        instagram.textContent = image.instagram;
-        instagram.href = image.instagramLink;
+        instagram.textContent = aboutGallery.photos[i].instagram;
+        instagram.href = aboutGallery.photos[i].instagramLink;
         galleryContainer.appendChild(imageContainer);
         imageContainer.appendChild(photo);
         imageContainer.appendChild(instagram);
@@ -105,8 +103,8 @@ function imageSliderHandler() {
     const nextVideoButton = document.querySelector('#about-next-video');
 
     imageSliderContainer.appendChild(paginationContainer);
-    const videoSrc = document.createElement('source');
-    video.appendChild(videoSrc);
+    // const videoSrc = document.createElement('source');
+    // video.appendChild(videoSrc);
     let currentVideo = 1;
 
 
@@ -124,8 +122,8 @@ function imageSliderHandler() {
         video.autoplay = true;
         video.muted = true;
         video.width = 400;
-        videoSrc.src = '../src/ImageSlider/slider_1.mp4';
-        videoSrc.type = 'video/mp4';
+        video.src = '../src/ImageSlider/slider_1.mp4';
+        video.type = 'video/mp4';
         handlePagination();
     }
 

@@ -1,5 +1,4 @@
 const path = require('path');
-
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -22,10 +21,37 @@ module.exports = {
                 type: 'asset/resource',
             },
             {
-                test: /\.mp4?$/,
-                loader: 'file-loader'
+                test: /\.(mov|mp4)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]'
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.html$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "html-loader",
+                        options: {
+                            sources: {
+                                list: [
+                                    {
+                                        tag: "source",
+                                        attribute: "src",
+                                        type: "src"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
             }
-        ],
-    },
+        ]
+    }
 
 };

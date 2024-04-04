@@ -53,7 +53,7 @@
     "fastq": "^1.17.1",
     "file-entry-cache": "^6.0.1",
     "find-up": "^4.1.0",
-    "firebase": "^10.10.0",
+    "firebase": "^10.6.0",
     "flat": "^5.0.2",
     "flat-cache": "^3.2.0",
     "flatted": "^3.3.1",
@@ -160,7 +160,6 @@
     "util-deprecate": "^1.0.2",
     "watchpack": "^2.4.0",
     "webpack": "^5.90.2",
-    "webpack-cli": "^5.1.4",
     "webpack-merge": "^5.10.0",
     "webpack-sources": "^3.2.3",
     "which": "^2.0.2",
@@ -170,11 +169,17 @@
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.10.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
-    "style-loader": "^3.3.4"
+    "file-loader": "^6.2.0",
+    "html-loader": "^5.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^3.3.4",
+    "url-loader": "^4.1.1",
+    "webpack-cli": "^5.1.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
