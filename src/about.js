@@ -4,6 +4,8 @@ import leftIcon from './menu-left.svg';
 import imageSlider from './ImageSlider/imageSlider.json';
 import aboutGallery from './AboutGallery/aboutGallery.json';
 import { selectExperiencePage } from './index.js';
+// import videoSrcInit from ('../src/ImageSlider/slider_1.mp4');
+
 export function loadAboutPage() {
     const aboutBtn = document.querySelector('#about');
     aboutBtn.style.textDecoration = 'underline';
@@ -75,7 +77,10 @@ export function loadAboutPage() {
         let imageContainer = document.createElement('div');
         imageContainer.classList.add('about-gallery-image-container');
         let photo = document.createElement('img');
-        photo.src = image.src;
+        console.log(`${image.src}`);
+        let tempSrc = `${image.src}`;
+        let imageSrc = require('./AboutGallery/image_1.jpg');
+        photo.src = imageSrc;
         let instagram = document.createElement('a');
         instagram.textContent = image.instagram;
         instagram.href = image.instagramLink;
@@ -106,6 +111,7 @@ function imageSliderHandler() {
 
 
     for (let i = 0; i < imageSlider.videos.length; i++) {
+        // let videoSrc = require(`../src/ImageSlider/slider_${i}.mp4`);
         let pagination = document.createElement('div');
         let num = i + 1
         pagination.id = 'page-' + num;

@@ -1,6 +1,7 @@
 import skateparkCards from './skateparkCards.json';
 import headerImg from './skateparks-header-img.jpg';
 import downloadIcon from './download.svg';
+import infographicPDF from './skatepark_accessibility_infographic.pdf';
 export function loadSkateparksPage() {
     const skateparksBtn = document.querySelector('#skateparks');
     skateparksBtn.style.textDecoration = 'underline';
@@ -32,7 +33,7 @@ export function loadSkateparksPage() {
     const downloadContainer = document.createElement('div');
     downloadContainer.id = 'download-container';
     const infographic = document.createElement('a');
-    infographic.href = '../src/skatepark_accessibility_infographic.pdf';
+    infographic.href = infographicPDF;
     infographic.textContent = 'Downloadable Infographic';
     infographic.target = '_blank';
     const download = document.createElement('img');
