@@ -73,15 +73,16 @@ export function loadAboutPage() {
     galleryTitle.textContent = 'the adaptive skate community is growing';
     const galleryContainer = document.createElement('div');
     galleryContainer.id = 'about-gallery-container';
-    for (let i = 1; i < aboutGallery.photos.length; i++) {
+    for (let i = 1; i <= aboutGallery.photos.length; i++) {
+        console.log(aboutGallery.photos.length);
         let imageContainer = document.createElement('div');
         imageContainer.classList.add('about-gallery-image-container');
         let photo = document.createElement('img');
         let imageSrc = require(`./AboutGallery/image_${i}.jpg`);
         photo.src = imageSrc;
         let instagram = document.createElement('a');
-        instagram.textContent = aboutGallery.photos[i].instagram;
-        instagram.href = aboutGallery.photos[i].instagramLink;
+        instagram.textContent = aboutGallery.photos[i - 1].instagram;
+        instagram.href = aboutGallery.photos[i - 1].instagramLink;
         galleryContainer.appendChild(imageContainer);
         imageContainer.appendChild(photo);
         imageContainer.appendChild(instagram);
