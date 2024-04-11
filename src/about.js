@@ -74,7 +74,6 @@ export function loadAboutPage() {
     const galleryContainer = document.createElement('div');
     galleryContainer.id = 'about-gallery-container';
     for (let i = 1; i <= aboutGallery.photos.length; i++) {
-        console.log(aboutGallery.photos.length);
         let imageContainer = document.createElement('div');
         imageContainer.classList.add('about-gallery-image-container');
         let photo = document.createElement('img');
