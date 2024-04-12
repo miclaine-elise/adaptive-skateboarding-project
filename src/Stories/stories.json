@@ -1,0 +1,24 @@
+{
+    "stories": [
+        {
+            "name": "Jennifer Lynn Adams",
+            "city": "Tacoma",
+            "country": "USA",
+            "age": 45,
+            "photo": "./story_image_1.jpg",
+            "info": "Hi I'm Jennifer Lynn Adams! I was born with partial limbs and as a kid I wasn't able to start learning to ride a bike like the other kids in my neighborhood. So instead I started riding my teenage neighbors skateboard at the age of 4.  I sit on the skateboard and push with my left leg. I have been skating ever since.  I have skated downhills, and learned to ollie.  But now I'm in my mid-forties and I skate for leisure. It is a wonderful way to get out, exercise, move and have a little fun!  My favorite place to skate is at the waterfront in my city. I love to watch the water and feel the sea breeze in my hair, while I skate as fast as I can. It truly makes me feel free and for a moment in time I am out of my wheelchair, skating wild and free.",
+            "instagram": "@awakenministriesacademy",
+            "instagramLink": "https://www.instagram.com/awakenministriesacademy"
+        },
+        {
+            "name": "Edward Jeffries",
+            "city": "Las Vegas",
+            "country": "USA",
+            "age": 39,
+            "photo": "./story_image_2.jpg",
+            "info": "Hi, I'm Edward Jeffries also known as Skateboard E. I'm a professional skateboarder originally from Las Vegas. Unfortunately, my skateboarding journey was interrupted by multiple knee injuries, including torn ligaments in my right knee and a blown-off kneecap in my left. Despite undergoing six surgeries, the doctors ultimately declared me disabled. Today, I still skate professionally with braces on both legs! I've won numerous competitions across the United States, including the title of Las Vegas Sport-Social Champion. ",
+            "instagram": "@e_sosask8",
+            "instagramLink": "https://www.instagram.com/e_sosask8"
+        }
+    ]
+}

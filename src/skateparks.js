@@ -7,7 +7,6 @@ export function loadSkateparksPage() {
     skateparksBtn.style.textDecoration = 'underline';
 
     const content = document.querySelector('#content');
-    content.style.backgroundColor = '#ececdf';
     const skateparksHeader = document.createElement('div');
     skateparksHeader.id = 'skateparks-header';
     const skateparksHeaderLine1 = document.createElement('h1');
