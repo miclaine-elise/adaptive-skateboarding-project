@@ -5,6 +5,7 @@ import { loadAboutPage } from './about.js';
 import { loadResourcesPage } from './resources.js';
 import { loadExperiencePage } from './experience.js';
 import { loadSkateparksPage } from './skateparks.js';
+import { loadEventsPage } from './events.js';
 import './normalize.css';
 import './style.css';
 

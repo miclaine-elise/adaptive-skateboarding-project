@@ -130,7 +130,7 @@ a {
 #about-quote {
     border: solid 1px black;
     width: calc(100vw/3);
-    font-size: calc(100vw/20);
+    font-size: calc(100vw/25);
     padding: 2rem;
     background-color: #1a1a1a;
     color: white;
@@ -143,6 +143,7 @@ a {
     color: white;
     width: 10rem;
     margin-top: -2rem;
+    margin-right: -1rem;
     justify-self: end;
     font-family: "Bebas Neue";
     font-size: 1.5rem;
@@ -175,8 +176,27 @@ a {
     font-size: 1.5rem;
 }
 
+#events-text {
+    font-size: 2rem;
+    margin: 3rem;
+}
+
+#events-contact {
+    margin: 3rem;
+    padding: 3rem;
+    border: solid 2px black;
+    border-radius: 1rem;
+    font-size: 2rem;
+}
+
+#events-instagram-button img,
+#events-email-button img {
+    width: 2rem;
+}
+
 #resources-header,
-#experience-header {
+#experience-header,
+#events-header {
     background-color: black;
     color: white;
     text-align: center;
@@ -187,7 +207,8 @@ a {
 }
 
 #resources-header h1,
-#experience-header h1 {
+#experience-header h1,
+#events-header h1 {
     font-size: 2rem;
 
 }
@@ -298,10 +319,10 @@ a {
 }
 
 .story-info {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-top: 1rem;
     letter-spacing: 0.02rem;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
 }
 
 #share-story-container {
@@ -313,12 +334,21 @@ a {
     margin-right: 4rem;
 }
 
-#share-story-button {
+#share-story-button,
+#events-instagram-button,
+#events-email-button {
     background: none;
     border: none;
 }
 
-#share-story-button:hover {
+#share-story-button:hover,
+#events-instagram-button:hover,
+#events-email-button:hover,
+#about,
+#experience,
+#events,
+#skateparks,
+#resources {
     cursor: pointer;
 }
 
