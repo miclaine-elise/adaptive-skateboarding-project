@@ -4,7 +4,13 @@ import leftIcon from './menu-left.svg';
 import imageSlider from './ImageSlider/imageSlider.json';
 import aboutGallery from './AboutGallery/aboutGallery.json';
 import { selectExperiencePage } from './index.js';
-// import image_1 from './AboutGallery'
+import adaptiveLogo from './adaptive-logo-background.png';
+import slider_1 from './ImageSlider/slider_1.mp4';
+import slider_2 from './ImageSlider/slider_2.mp4';
+import slider_3 from './ImageSlider/slider_3.mp4';
+import slider_4 from './ImageSlider/slider_4.mp4';
+
+
 
 export function loadAboutPage() {
     const aboutBtn = document.querySelector('#about');
@@ -95,6 +101,7 @@ export function loadAboutPage() {
     imageSliderHandler();
 }
 function imageSliderHandler() {
+    const videos = [slider_1, slider_2, slider_3, slider_4];
     const video = document.querySelector('#about-video');
     const paginationContainer = document.createElement('div');
     paginationContainer.id = 'about-pagination-container';
@@ -103,13 +110,10 @@ function imageSliderHandler() {
     const nextVideoButton = document.querySelector('#about-next-video');
 
     imageSliderContainer.appendChild(paginationContainer);
-    // const videoSrc = document.createElement('source');
-    // video.appendChild(videoSrc);
     let currentVideo = 1;
 
 
     for (let i = 0; i < imageSlider.videos.length; i++) {
-        // let videoSrc = require(`../src/ImageSlider/slider_${i}.mp4`);
         let pagination = document.createElement('div');
         let num = i + 1
         pagination.id = 'page-' + num;
@@ -122,7 +126,7 @@ function imageSliderHandler() {
         video.autoplay = true;
         video.muted = true;
         video.width = 400;
-        video.src = '../src/ImageSlider/slider_1.mp4';
+        video.src = videos[currentVideo - 1];
         video.type = 'video/mp4';
         handlePagination();
     }
@@ -132,7 +136,7 @@ function imageSliderHandler() {
         if (currentVideo > imageSlider.videos.length) {
             currentVideo = 1;
         }
-        videoSrc.src = '../src/ImageSlider/slider_' + currentVideo + '.mp4';
+        video.src = videos[currentVideo - 1];
         video.load();
         handlePagination();
     }
@@ -143,7 +147,7 @@ function imageSliderHandler() {
         if (currentVideo < 1) {
             currentVideo = imageSlider.videos.length;
         }
-        videoSrc.src = '../src/ImageSlider/slider_' + currentVideo + '.mp4';
+        video.src = videos[currentVideo - 1];
         video.load();
         handlePagination();
     })

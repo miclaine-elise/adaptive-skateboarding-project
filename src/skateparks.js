@@ -2,6 +2,16 @@ import skateparkCards from './skateparkCards.json';
 import headerImg from './skateparks-header-img.jpg';
 import downloadIcon from './download.svg';
 import infographicPDF from './skatepark_accessibility_infographic.pdf';
+import adaImg from './skateparkImages/ada.png';
+import communityImg from './skateparkImages/community.png';
+import designImg from './skateparkImages/design.png';
+import entranceImg from './skateparkImages/entrance.png';
+import modificationsImg from './skateparkImages/modifications.png';
+import restroomsImg from './skateparkImages/restrooms.png';
+import safetyImg from './skateparkImages/safety.png';
+import spaceImg from './skateparkImages/space.png';
+
+
 export function loadSkateparksPage() {
     const skateparksBtn = document.querySelector('#skateparks');
     skateparksBtn.style.textDecoration = 'underline';

@@ -298,8 +298,10 @@ a {
 }
 
 .story-info {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-top: 1rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.25rem;
 }
 
 #share-story-container {

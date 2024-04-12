@@ -3,42 +3,42 @@
         {
             "title": "ENTRANCE",
             "info": "Entrance considerations for skateparks involve accessible parking, (12: 1\") access ramps, wide paved accessways, wide entrance- ways, fence or door handles at low heights, brailed paving & high visual contrast for changes in accessways.",
-            "photo": "../src/skateparkImages/entrance.png"
+            "photo": "./entrance.png"
         },
         {
             "title": "RESTROOMS",
             "info": "Having a clean, well-lit, and wide-open space supports a safe and accessible restroom. Other considerations include secure grab bars, space to transfer from wheelchair, and simple-use hygiene supplies. Having a clean water source is also important for hygiene and safety needs.",
-            "photo": "../src/skateparkImages/restrooms.png"
+            "photo": "./restrooms.png"
         },
         {
             "title": "DESIGN",
             "info": "Skatepark design should provide options for all skill levels & skate styles. Unique obstacles support creativity & innovation for users. Obstacles should accommodate the various equipment & abilities of users. Including, wide deck space, access ramps to decks & obstacles, exit routes of bowls, & extended drop-off ramps.",
-            "photo": "../src/skateparkImages/design.png"
+            "photo": "./design.png"
         },
         {
             "title": "SPACE",
             "info": "The sq ft. of a skatepark can impact the space available & the amount of users able to participate at once. The flow & layout of the skatepark should be considered to optimize space for multiple users. Space should include areas for rest & navigating around the park without disrupting the flow.",
-            "photo": "../src/skateparkImages/space.png"
+            "photo": "./space.png"
         },
         {
             "title": "MODIFICATIONS",
             "info": "Modifying the environment can support participation for individuals with various abilities. For example, adding visual contrast and tactile cues on obstacles to indicate changes in surfaces; or extended ledges on boxes to support transition time.",
-            "photo": "../src/skateparkImages/modifications.png"
+            "photo": "./modifications.png"
         },
         {
             "title": "ADA&UD",
             "info": "ADA standards for the physical environment should be applied to skatepark entrances & access points for skatepark obstacles. The 7 principles of Universal Design (UD), should be applied to create equitableuse, flexible use, simple and intuitive use, perceptible use, tolerance for error, low physical effort, and size & space for use. [reference link]",
-            "photo": "../src/skateparkImages/ada.png"
+            "photo": "./ada.png"
         },
         {
             "title": "SAFETY",
             "info": "Encouraging protective equipment can minimize injury & keep you skating longer! Skateparks should have security lights & emergency response access. Location of the park should consider proximity to business & transportation systems. Providing shaded & covered areas, plus access to clean water can help on those major weather days.",
-            "photo": "../src/skateparkImages/safety.png"
+            "photo": "./safety.png"
         },
         {
             "title": "COMMUNITY",
             "info": "Community pride, art design, and unique features can make a skatepark special. A sense of community promotes a safe & inclusive environment, which can create a sense of belonging for adaptive skaters, WCMX’ers, and all skaters together. At its core, community is why skateboarding is so",
-            "photo": "../src/skateparkImages/community.png"
+            "photo": "./community.png"
         }
     ]
 }
