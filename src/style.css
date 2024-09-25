@@ -74,7 +74,7 @@ a {
 
 #about-title {
     position: absolute;
-    top: 2rem;
+    top: calc(100vw/60);
     color: white;
     font-size: calc(100vw/12);
     z-index: 2;
@@ -173,7 +173,8 @@ a {
     justify-self: center;
     max-width: 50rem;
     line-height: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-family: Tahoma;
 }
 
 #events-text {
@@ -319,6 +320,7 @@ a {
 }
 
 .story-info {
+    font-family: Tahoma;
     font-size: 1.25rem;
     margin-top: 1rem;
     letter-spacing: 0.02rem;
@@ -376,11 +378,13 @@ a {
 .skatepark-card p {
     grid-area: 2/1/3/2;
     align-self: center;
-    font-size: calc(100vw/50);
+    font-size: 1rem;
     padding: 2rem;
+    line-height: 1.25rem;
     border-radius: 1rem;
     border: solid 2px black;
     letter-spacing: 0.05rem;
+    font-family: Tahoma;
 }
 
 .skatepark-card img {
@@ -518,6 +522,8 @@ a {
 
 .about-gallery-image-container a {
     color: white;
+    font-family: Tahoma;
+    font-size: 0.75rem;
 }
 
 @media (max-width: 700px) {
@@ -568,11 +574,6 @@ a {
         font-size: 2rem;
     }
 
-    #about-definition {
-        line-height: 1rem;
-        font-size: 1rem;
-    }
-
     #about-gallery-container {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
@@ -613,7 +614,6 @@ a {
         padding: 0.5rem;
     }
 
-
     .story-name {
         font-size: 2rem;
     }
@@ -622,11 +622,6 @@ a {
     .story-location,
     .story-instagram-link {
         font-size: 1rem;
-    }
-
-    .story-info {
-        font-size: 1rem;
-        margin-top: 1rem;
     }
 
     #resources-header h1,
@@ -641,12 +636,6 @@ a {
     .skatepark-card h1 {
         grid-area: 1/1/2/2;
         padding: 0;
-    }
-
-    .skatepark-card p {
-        grid-area: 2/1/3/2;
-        font-size: 0.75rem;
-        padding: 0.5rem;
     }
 
     .skatepark-card img {
@@ -715,11 +704,17 @@ a {
         grid-area: 3/1/4/2;
     }
 
-    #resources-highlighted-program,
-    #resources-highlighted-grant {
+    #resources-highlighted-program h1,
+    #resources-highlighted-grant h1 {
         grid-area: 2/1/3/2;
         gap: 0;
         font-size: 0.75rem;
+        /* font-family: Tahoma; */
+    }
+
+    #resources-highlighted-program p,
+    #resources-highlighted-grant p {
+        font-family: Tahoma;
     }
 
     #resources-highlighted-program img {
